@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akbar | Web Developer & Bug Fixer</title>
+    <style>
+        :root {
+            --primary: #4CAF50;
+            --dark: #1a1a1a;
+            --light: #f4f4f4;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        h2 { color: var(--primary); }
+        .skills span {
+            background: #e8f5e9;
+            color: var(--primary);
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 5px;
+            font-weight: bold;
+        }
+        /* Game Section inside Portfolio */
+        .game-box {
+            background: #f9f9f9;
+            padding: 20px;
+            border: 2px dashed var(--primary);
+            border-radius: 10px;
+            text-align: center;
+        }
+        input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100px;
+            font-size: 1.1rem;
+        }
+        button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .fiverr-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            background: #1dbf73;
+            text-decoration: none;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Hi, I'm Akbar 👋</h1>
+    <p>Professional Web Developer & Bug Fixing Expert</p>
+</header>
+
+<div class="container">
+    
+    <div class="card">
+        <h2>About Me</h2>
+        <p>I specialize in fixing complex bugs in <strong>HTML, CSS, and JavaScript</strong>. With a focus on clean code and fast delivery, I help clients build seamless web experiences.</p>
+        <div class="skills">
+            <span>HTML5</span> <span>CSS3</span> <span>JavaScript (ES6+)</span> <span>Bug Fixing</span> <span>Responsive Design</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Live Demo: Guess My Number</h2>
+        <p>I built this logic-based game to demonstrate my JavaScript skills. Try it!</p>
+        <div class="game-box">
+            <p>Guess between 1 - 10</p>
+            <input type="number" id="guessInput" placeholder="?">
+            <button onclick="checkGame()">Guess!</button>
+            <p id="gameResult">Ready to play?</p>
+            <p>Score: <span id="gameScore">10</span></p>
+        </div>
+    </div>
+
+    <div class="card" style="text-align: center;">
+        <h2>Hire Me on Fiverr</h2>
+        <p>Need a bug fixed in 24 hours? Let's talk!</p>
+        <a href="https://www.fiverr.com/akbar_15" class="fiverr-btn" target="_blank">Contact on Fiverr</a>
+    </div>
+
+</div>
+
+<script>
+    // Game Logic
+    let secretNum = Math.floor(Math.random() * 10) + 1;
+    let score = 10;
+
+    function checkGame() {
+        const input = document.getElementById('guessInput');
+        const res = document.getElementById('gameResult');
+        const scoreDisp = document.getElementById('gameScore');
+
+        if(input.value == secretNum) {
+            res.textContent = "Correct! You're a Genius! 🎉";
+            res.style.color = "green";
+            alert("You Won!");
+            location.reload();
+        } else {
+            score--;
+            scoreDisp.textContent = score;
+            res.textContent = "Wrong! Try again. ❌";
+            res.style.color = "red";
+            if(score <= 0) {
+                alert("Game Over! Number was " + secretNum);
+                location.reload();
+            }
+        }
+        input.value = "";
+    }
+</script>
+
+</body>
+</html>
