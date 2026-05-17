@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pearl White Dental — Your Best Smile Starts Here</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Fonts: Cormorant Garamond (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+ 
+  <!-- ========== NAV ========== -->
+  <header class="nav-wrapper">
+    <nav class="nav container">
+      <a href="#" class="nav-logo">
+        <span class="logo-dot"></span>
+        Pearl White
+      </a>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#doctor">Our Doctor</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="#book" class="btn btn--outline">Book Now</a>
+      <button class="nav-hamburger" aria-label="Open menu">&#9776;</button>
+    </nav>
+  </header>
+ 
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <img
+      class="hero-bg"
+      src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1920&q=80"
+      alt="Modern dental clinic interior"
+    />
+    <div class="hero-content container">
+      <p class="hero-eyebrow">Boutique Dental Care · Est. 2010</p>
+      <h1 class="hero-headline">
+        Your Best<br /><em>Smile</em> Starts<br />Here.
+      </h1>
+      <p class="hero-sub">
+        Compassionate, precision dentistry in a calm, modern environment.<br />
+        Because your confidence deserves the finest care.
+      </p>
+      <div class="hero-cta-group">
+        <a href="#book" class="btn btn--primary" id="book">Book Appointment</a>
+        <a href="#services" class="btn btn--ghost">Explore Services ↓</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span>12+</span><p>Years of Practice</p></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span>4,800+</span><p>Happy Patients</p></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span>99%</span><p>Satisfaction Rate</p></div>
+      </div>
+    </div>
+    <!-- Decorative arch -->
+    <div class="hero-arch"></div>
+  </section>
+ 
+  <!-- ========== SERVICES ========== -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">What We Offer</p>
+        <h2 class="section-title">Expert Care,<br /><em>Every Visit</em></h2>
+      </div>
+      <div class="services-grid">
+ 
+        <article class="service-card">
+          <div class="service-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Dental checkup" />
+            <div class="service-card__badge">Preventive</div>
+          </div>
+          <div class="service-card__body">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-5-5 1.41-1.41L11 14.17l7.59-7.59L20 8l-9 9z"/></svg>
+            </div>
+            <h3>Checkups &amp; Cleaning</h3>
+            <p>Routine exams, digital X-rays, and professional cleanings that keep decay and gum disease at bay — a foundation for lifelong dental health.</p>
+            <a href="#book" class="card-link">Schedule a visit →</a>
+          </div>
+        </article>
+ 
+        <article class="service-card service-card--featured">
+          <div class="service-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=600&q=80" alt="Dental implants" />
+            <div class="service-card__badge">Restorative</div>
+          </div>
+          <div class="service-card__body">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a5 5 0 015 5v1h1a3 3 0 010 6h-1v3a3 3 0 01-6 0v-3H9a3 3 0 010-6h1V7a5 5 0 015-5z"/></svg>
+            </div>
+            <h3>Dental Implants</h3>
+            <p>Permanent, natural-looking tooth replacements anchored directly into the jawbone — the gold standard in modern restorative dentistry.</p>
+            <a href="#book" class="card-link">Learn more →</a>
+          </div>
+        </article>
+ 
+        <article class="service-card">
+          <div class="service-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=600&q=80" alt="Braces and orthodontics" />
+            <div class="service-card__badge">Orthodontics</div>
+          </div>
+          <div class="service-card__body">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+            </div>
+            <h3>Braces &amp; Aligners</h3>
+            <p>Traditional braces and clear aligner therapy to straighten teeth discreetly and comfortably — for teens and adults alike.</p>
+            <a href="#book" class="card-link">Get a free consult →</a>
+          </div>
+        </article>
+ 
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ========== DOCTOR BIO ========== -->
+  <section class="doctor section" id="doctor">
+    <div class="container doctor-layout">
+      <div class="doctor-image-wrap">
+        <div class="doctor-image-frame">
+          <img
+            src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80"
+            alt="Dr. Sophia Mehra, DDS"
+          />
+        </div>
+        <div class="doctor-credential">
+          <span>🏅</span>
+          <p>ADA Certified<br />Member Since 2012</p>
+        </div>
+      </div>
+      <div class="doctor-bio">
+        <p class="section-eyebrow">Meet Your Dentist</p>
+        <h2 class="section-title">Dr. Sophia Mehra,<br /><em>DDS, MSD</em></h2>
+        <p class="doctor-bio__lead">
+          "I believe every patient deserves to feel safe, heard, and confident walking out with a smile they love."
+        </p>
+        <p class="doctor-bio__body">
+          Dr. Mehra graduated top of her class from NYU College of Dentistry and completed her residency in Advanced Prosthodontics at Johns Hopkins. With over 12 years of clinical experience, she combines cutting-edge techniques with a deeply personal, anxiety-free approach.
+        </p>
+        <ul class="doctor-highlights">
+          <li><span>✦</span> Fellow, American Academy of Cosmetic Dentistry</li>
+          <li><span>✦</span> 3× "Best Dentist" — Metro Health Awards</li>
+          <li><span>✦</span> Fluent in English, Hindi &amp; Spanish</li>
+          <li><span>✦</span> Specialist in implants &amp; full-mouth rehabilitation</li>
+        </ul>
+        <a href="#book" class="btn btn--primary">Book with Dr. Mehra</a>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ========== REVIEW SLIDER ========== -->
+  <section class="reviews section" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Patient Stories</p>
+        <h2 class="section-title">Smiles That<br /><em>Speak Volumes</em></h2>
+      </div>
+ 
+      <div class="slider-wrapper" role="region" aria-label="Testimonials">
+        <div class="slider-track" id="sliderTrack">
+ 
+          <div class="slide" role="group" aria-label="Review 1 of 5">
+            <div class="slide-stars">★★★★★</div>
+            <blockquote>
+              "I had severe dental anxiety and had avoided the dentist for years. Dr. Mehra changed everything. She was patient, explained every step, and made me feel completely at ease. My implants look indistinguishable from my real teeth."
+            </blockquote>
+            <div class="slide-author">
+              <img src="https://i.pravatar.cc/80?img=47" alt="Marcus T." />
+              <div>
+                <strong>Marcus T.</strong>
+                <span>Dental Implants Patient</span>
+              </div>
+            </div>
+          </div>
+ 
+          <div class="slide" role="group" aria-label="Review 2 of 5">
+            <div class="slide-stars">★★★★★</div>
+            <blockquote>
+              "Pearl White completely transformed my smile. I had crowded teeth my entire life and after 14 months with clear aligners, I cannot believe the result. The team checked in on me every step of the way. Worth every penny."
+            </blockquote>
+            <div class="slide-author">
+              <img src="https://i.pravatar.cc/80?img=32" alt="Priya S." />
+              <div>
+                <strong>Priya S.</strong>
+                <span>Clear Aligner Patient</span>
+              </div>
+            </div>
+          </div>
+ 
+          <div class="slide" role="group" aria-label="Review 3 of 5">
+            <div class="slide-stars">★★★★★</div>
+            <blockquote>
+              "The clinic is spotless, modern, and smells nothing like a typical dental office. The staff remember your name, your preferences, even which music you like. It feels more like a spa than a dentist. My whole family comes here now."
+            </blockquote>
+            <div class="slide-author">
+              <img src="https://i.pravatar.cc/80?img=12" alt="James R." />
+              <div>
+                <strong>James R.</strong>
+                <span>Family Patient · 3 Years</span>
+              </div>
+            </div>
+          </div>
+ 
+          <div class="slide" role="group" aria-label="Review 4 of 5">
+            <div class="slide-stars">★★★★★</div>
+            <blockquote>
+              "I came in for a routine checkup and left with a personalized oral-health plan I actually understood. No upselling, no pressure — just clear communication and genuine care. Finally a dentist I trust completely."
+            </blockquote>
+            <div class="slide-author">
+              <img src="https://i.pravatar.cc/80?img=25" alt="Anika W." />
+              <div>
+                <strong>Anika W.</strong>
+                <span>Preventive Care Patient</span>
+              </div>
+            </div>
+          </div>
+ 
+          <div class="slide" role="group" aria-label="Review 5 of 5">
+            <div class="slide-stars">★★★★★</div>
+            <blockquote>
+              "Had an emergency cracked tooth on a Friday evening and they saw me within the hour. The repair was seamless and the follow-up care was exceptional. This is what dentistry should feel like — responsive, professional, and kind."
+            </blockquote>
+            <div class="slide-author">
+              <img src="https://i.pravatar.cc/80?img=60" alt="Daniel K." />
+              <div>
+                <strong>Daniel K.</strong>
+                <span>Emergency Care Patient</span>
+              </div>
+            </div>
+          </div>
+ 
+        </div><!-- /slider-track -->
+ 
+        <div class="slider-controls">
+          <button class="slider-btn" id="prevBtn" aria-label="Previous review">←</button>
+          <div class="slider-dots" id="sliderDots"></div>
+          <button class="slider-btn" id="nextBtn" aria-label="Next review">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ========== FAQ ACCORDION ========== -->
+  <section class="faq section" id="faq">
+    <div class="container faq-layout">
+      <div class="faq-header">
+        <p class="section-eyebrow">Got Questions?</p>
+        <h2 class="section-title">Everything You<br /><em>Need to Know</em></h2>
+        <p class="faq-intro">We believe informed patients make the best decisions. Here are the questions we hear most often.</p>
+        <a href="#book" class="btn btn--primary" style="margin-top:2rem;">Ask Us Anything</a>
+      </div>
+ 
+      <div class="faq-list" id="faqList">
+ 
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How often should I visit the dentist?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Most patients benefit from a routine checkup and cleaning every six months. However, if you have a history of gum disease, cavities, or other ongoing issues, Dr. Mehra may recommend visits every three to four months. We'll create a schedule tailored specifically to your oral health needs.</p>
+          </div>
+        </div>
+ 
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Are dental implants right for me?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Dental implants are suitable for most adults with good general health and sufficient jawbone density. Ideal candidates are non-smokers without uncontrolled diabetes. We conduct a thorough consultation including 3D scans to assess your suitability. If bone loss has occurred, bone grafting can often make implants possible.</p>
+          </div>
+        </div>
+ 
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What is the difference between braces and clear aligners?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Traditional braces use metal brackets and wires permanently bonded to the teeth — they're highly effective for complex cases. Clear aligners (like Invisalign) are removable, virtually invisible trays changed every 1–2 weeks. Aligners offer aesthetic advantages and easier cleaning, but braces may be more appropriate for severe misalignment. We'll recommend the best option after a full assessment.</p>
+          </div>
+        </div>
+ 
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Do you accept dental insurance?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes — we are in-network with most major insurance providers including Delta Dental, Cigna, Aetna, MetLife, and BlueCross BlueShield. Our front-desk team will verify your benefits before your appointment and provide a clear breakdown of any out-of-pocket costs. We also offer flexible payment plans through CareCredit.</p>
+          </div>
+        </div>
+ 
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Is teeth whitening safe, and how long does it last?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Professional in-office whitening (which we use) is very safe and supervised by Dr. Mehra to protect your gum tissue and enamel. Results typically last 1–3 years depending on diet and oral hygiene. We also provide custom take-home trays for touch-ups. Over-the-counter products are less effective and carry higher risks if misused.</p>
+          </div>
+        </div>
+ 
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What should I expect during my first visit?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Your first appointment is a comprehensive new-patient exam (about 60–90 minutes). We'll take digital X-rays, perform a full oral health assessment including a gum evaluation and oral cancer screening, and have an in-depth conversation about your dental history and goals. Dr. Mehra will then present a personalized treatment plan with no pressure to proceed immediately.</p>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ========== FOOTER / CTA ========== -->
+  <footer class="footer">
+    <div class="footer-cta container">
+      <h2>Ready to Transform<br /><em>Your Smile?</em></h2>
+      <p>New patients always welcome. Same-week appointments available.</p>
+      <a href="tel:+15551234567" class="btn btn--primary">Call (555) 123-4567</a>
+    </div>
+    <div class="footer-bottom container">
+      <p class="footer-logo">Pearl White Dental</p>
+      <p class="footer-address">123 Ivory Lane, Suite 400 · New York, NY 10001</p>
+      <p class="footer-copy">&copy; 2025 Pearl White Dental. All rights reserved.</p>
+    </div>
+  </footer>
+ 
+  <script src="scripts.js"></script>
+</body>
+</html>
