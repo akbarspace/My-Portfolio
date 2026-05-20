@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Rock Boys — Tailoring</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="logo">ROCK BOYS</h1>
+    <p class="tagline">Tailoring Shop</p>
+  </header>
+
+  <nav class="nav" aria-label="Main sections">
+    <button type="button" class="nav-btn nav-btn--active" data-view="billing" aria-pressed="true">
+      <span class="nav-icon" aria-hidden="true">₹</span>
+      <span>Billing</span>
+    </button>
+    <button type="button" class="nav-btn" data-view="analytics" aria-pressed="false">
+      <span class="nav-icon" aria-hidden="true">📊</span>
+      <span>Analytics</span>
+    </button>
+  </nav>
+
+  <main id="view-billing" class="view view--active">
+    <section class="inputs">
+      <label class="field">
+        <span class="field-label">Customer Name</span>
+        <input type="text" id="customer-name" class="field-input" placeholder="Name" autocomplete="name">
+      </label>
+      <label class="field">
+        <span class="field-label">Mobile Number</span>
+        <input type="tel" id="mobile" class="field-input" placeholder="10-digit mobile" inputmode="numeric" maxlength="10" autocomplete="tel">
+      </label>
+    </section>
+
+    <section class="products" aria-label="Add shirt or pant">
+      <button type="button" class="product-btn" data-item="shirt" data-price="350" aria-label="Add Shirt, 350 rupees">
+        <span class="product-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32 8L20 16v6l-8 6 6 28h28l6-28-8-6v-6L32 8z" fill="#4fc3f7" stroke="#fff" stroke-width="2"/>
+            <path d="M26 22h12M32 16v6" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="32" cy="14" r="3" fill="#fff"/>
+          </svg>
+        </span>
+        <span class="product-name">Shirt</span>
+        <span class="product-price">₹350</span>
+      </button>
+
+      <button type="button" class="product-btn" data-item="pant" data-price="450" aria-label="Add Pant, 450 rupees">
+        <span class="product-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 12h20l4 8v36H36V28H28v28H18V20l4-8z" fill="#81c784" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M22 12l10 8 10-8" stroke="#fff" stroke-width="2"/>
+          </svg>
+        </span>
+        <span class="product-name">Pant</span>
+        <span class="product-price">₹450</span>
+      </button>
+    </section>
+
+    <section class="alteration-block" aria-label="Add alteration">
+      <div class="alteration-icon-wrap" aria-hidden="true">
+        <svg class="alteration-icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Thread spool -->
+          <ellipse cx="22" cy="52" rx="14" ry="8" fill="#ffb74d" stroke="#fff" stroke-width="2"/>
+          <rect x="10" y="28" width="24" height="24" rx="4" fill="#ff9800" stroke="#fff" stroke-width="2"/>
+          <path d="M14 34h20M14 40h20M14 46h20" stroke="#fff" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+          <!-- Thread from spool -->
+          <path d="M34 40c12 0 20 8 28 20" stroke="#ffe082" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="4 3"/>
+          <!-- Needle -->
+          <path d="M58 12 L48 68" stroke="#e0e0e0" stroke-width="3" stroke-linecap="round"/>
+          <ellipse cx="58" cy="12" rx="4" ry="5" fill="#bdbdbd" stroke="#fff" stroke-width="1.5"/>
+          <circle cx="58" cy="12" r="1.5" fill="#424242"/>
+          <!-- Thread through needle eye -->
+          <path d="M54 16 Q62 24 50 32" stroke="#ffb74d" stroke-width="2" stroke-linecap="round" fill="none"/>
+        </svg>
+      </div>
+      <span class="alteration-title">Alteration</span>
+      <div class="alteration-controls">
+        <label class="alteration-amount-label" for="alteration-amount">Amount</label>
+        <input
+          type="number"
+          id="alteration-amount"
+          class="alteration-amount-input"
+          placeholder="Enter Amount"
+          inputmode="decimal"
+          min="1"
+          step="1"
+          aria-label="Alteration amount in rupees"
+        >
+        <button type="button" id="btn-add-alteration" class="btn-add-alteration">Add</button>
+      </div>
+    </section>
+
+    <section class="cart" aria-label="Current bill">
+      <h2 class="section-title">Bill Items</h2>
+      <ul id="cart-list" class="cart-list"></ul>
+      <p id="cart-empty" class="cart-empty">Tap Shirt, Pant, or add Alteration amount</p>
+      <div class="total-box">
+        <span class="total-label">TOTAL</span>
+        <span id="total-amount" class="total-amount">₹0</span>
+      </div>
+    </section>
+
+    <button type="button" id="btn-invoice" class="btn-invoice" disabled>
+      ✓ Generate Invoice
+    </button>
+
+    <section id="invoice-panel" class="invoice-panel" hidden>
+      <h2 class="section-title">Invoice</h2>
+      <div id="invoice-content" class="invoice-content"></div>
+      <button type="button" id="btn-new-bill" class="btn-secondary">New Bill</button>
+    </section>
+  </main>
+
+  <main id="view-analytics" class="view" hidden>
+    <section class="stats">
+      <article class="stat-card stat-card--today">
+        <span class="stat-icon" aria-hidden="true">☀</span>
+        <span class="stat-label">Today</span>
+        <span id="stat-today" class="stat-value">₹0</span>
+      </article>
+      <article class="stat-card stat-card--month">
+        <span class="stat-icon" aria-hidden="true">📅</span>
+        <span class="stat-label">This Month</span>
+        <span id="stat-month" class="stat-value">₹0</span>
+      </article>
+    </section>
+
+    <section class="chart-section" aria-label="Earnings chart">
+      <h2 class="section-title">Earnings Overview</h2>
+      <div class="chart" role="img" aria-label="Bar chart of today vs this month">
+        <div class="chart-bar-wrap">
+          <div id="bar-today" class="chart-bar chart-bar--today" style="height: 0%"></div>
+          <span class="chart-bar-label">Today</span>
+        </div>
+        <div class="chart-bar-wrap">
+          <div id="bar-month" class="chart-bar chart-bar--month" style="height: 0%"></div>
+          <span class="chart-bar-label">Month</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="orders-section">
+      <h2 class="section-title">Recent Orders</h2>
+      <ul id="orders-list" class="orders-list"></ul>
+      <p id="orders-empty" class="cart-empty">No orders yet</p>
+    </section>
+
+    <section class="danger-section" aria-label="Reset stored data">
+      <button type="button" id="btn-clear-records" class="btn-clear-records">
+        Clear All Records
+      </button>
+      <p class="danger-hint">Deletes all saved orders. Cannot be undone.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
