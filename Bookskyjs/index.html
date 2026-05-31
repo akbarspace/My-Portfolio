@@ -8,8 +8,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 </head>
 <body>
+
+    <div id="login-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); z-index: 1000; display: flex; align-items: center; justify-content: center;">
+  <div style="background: rgba(255,255,255,0.06); border: 0.5px solid rgba(255,255,255,0.18); border-radius: 20px; padding: 2.5rem 2rem; width: 320px; text-align: center;">
+
+    <div style="width: 52px; height: 52px; background: #fd5e53; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem;">
+      📚
+    </div>
+
+    <h2 style="color: #fff; font-size: 22px; font-weight: 500; margin: 0 0 0.25rem;">Welcome to Booksky</h2>
+    <p style="color: rgba(255,255,255,0.5); font-size: 13px; margin: 0 0 2rem;">Sign in to your account</p>
+
+    <div style="margin-bottom: 14px; text-align: left;">
+      <label style="font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.6); letter-spacing: 0.05em; display: block; margin-bottom: 6px;">EMAIL</label>
+      <input type="email" id="email" placeholder="you@example.com"
+        style="width: 100%; box-sizing: border-box; padding: 11px 12px; background: rgba(255,255,255,0.08); border: 0.5px solid rgba(255,255,255,0.2); border-radius: 10px; color: #fff; font-size: 14px; outline: none;"
+      />
+    </div>
+
+    <div style="margin-bottom: 1.75rem; text-align: left;">
+      <label style="font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.6); letter-spacing: 0.05em; display: block; margin-bottom: 6px;">PASSWORD</label>
+      <input type="password" id="password" placeholder="••••••••"
+        style="width: 100%; box-sizing: border-box; padding: 11px 12px; background: rgba(255,255,255,0.08); border: 0.5px solid rgba(255,255,255,0.2); border-radius: 10px; color: #fff; font-size: 14px; outline: none;"
+      />
+    </div>
+
+    <button id="login-btn" style="width: 100%; padding: 12px; background: #fd5e53; border: none; color: #fff; border-radius: 10px; cursor: pointer; font-size: 15px; font-weight: 500;">
+      Login / Sign up
+    </button>
+  </div>
+</div>
+</div>
+
     <div class="navbar">
         <h1>Booksky</h1>
     </div>
@@ -39,6 +72,7 @@
 
     <button class="add-button" id="add-popup-button">+</button>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
 </body>
 </html>
