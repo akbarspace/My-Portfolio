@@ -144,3 +144,44 @@ onAuthStateChanged(auth, (user) => {
         loginOverlay.style.display = 'flex';
     }
 });
+
+// Auth & Real-time Fetch Logic
+onAuthStateChanged(auth, (user) => {
+    
+    // 👇 INDHA LINE DHAAN PUDHUSA ADD PANNIRUKOM 👇
+    // Firebase check panni mudichadhum Loader-ah hide panrom
+    document.getElementById('page-loader').style.display = 'none';
+
+    if (user) {
+        loginOverlay.style.display = 'none';
+        const q = query(collection(db, "books"), orderBy("createdAt", "desc"));
+        
+        onSnapshot(q, (snapshot) => {
+            container.innerHTML = ""; 
+            snapshot.docs.forEach((docSnap) => {
+                const book = docSnap.data();
+                if(book.uid === user.uid) {
+                    var div = document.createElement("div");
+                    div.setAttribute("class", "book-container");
+                    div.innerHTML = `
+                        <h2>${book.title}</h2>
+                        <h5>${book.author}</h5>
+                        <p>${book.description}</p>
+                        <button class="delete-btn" data-id="${docSnap.id}">Delete</button>
+                    `;
+                    container.append(div);
+                }
+            });
+            
+            // Delete listener for each button
+            document.querySelectorAll(".delete-btn").forEach(btn => {
+                btn.onclick = async (e) => {
+                    const id = e.target.getAttribute("data-id");
+                    await deleteDoc(doc(db, "books", id));
+                };
+            });
+        });
+    } else {
+        loginOverlay.style.display = 'flex';
+    }
+});
