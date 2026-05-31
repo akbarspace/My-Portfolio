@@ -32,16 +32,27 @@ var loginBtn = document.getElementById('login-btn');
 
 // --- Functions ---
 
-// Popup Show/Hide logic
-addpopupbutton.addEventListener("click", () => {
+// + Icon click panna popup varum
+addpopupbutton.addEventListener("click", function() {
     popupoverlay.style.display = "block";
     popupbox.style.display = "block";
+    
+    // Animation trigger panna 10ms gap kudukkurom
+    setTimeout(() => {
+        popupbox.classList.add("show");
+    }, 10);
 });
 
-document.getElementById("cancel-popup").addEventListener("click", (e) => {
-    e.preventDefault();
-    popupoverlay.style.display = "none";
-    popupbox.style.display = "none";
+// Cancel click panna popup pogum
+cancelpopup.addEventListener("click", function(event) {
+    event.preventDefault();
+    popupbox.classList.remove("show");
+    
+    // Animation mudinja piragu display hidden panrom
+    setTimeout(() => {
+        popupbox.style.display = "none";
+        popupoverlay.style.display = "none";
+    }, 300); 
 });
 
 // Login/Signup Logic
