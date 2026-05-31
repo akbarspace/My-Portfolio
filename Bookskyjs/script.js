@@ -47,13 +47,28 @@ document.getElementById("cancel-popup").addEventListener("click", (e) => {
 // Login/Signup Logic
 // Success Popup function
 function showSuccess() {
-    const popup = document.getElementById('success-popup');
-    popup.style.display = 'block';
-    
-    // 2 seconds kazhichi automatically hide aagidum
+  const popup = document.getElementById('success-popup');
+  const bar = document.getElementById('progress-bar');
+
+  popup.classList.remove('hide');
+  popup.classList.add('show');
+
+  // Progress bar drains over 2 seconds
+  bar.style.transition = 'none';
+  bar.style.transform = 'scaleX(1)';
+  setTimeout(() => {
+    bar.style.transition = 'transform 2s linear';
+    bar.style.transform = 'scaleX(0)';
+  }, 50);
+
+  // Fade out after 2.2s
+  setTimeout(() => {
+    popup.classList.remove('show');
+    popup.classList.add('hide');
     setTimeout(() => {
-        popup.style.display = 'none';
-    }, 2500);
+      popup.classList.remove('hide');
+    }, 300);
+  }, 2200);
 }
 
 // Update unga Login Button Listener
