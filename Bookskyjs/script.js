@@ -45,18 +45,30 @@ document.getElementById("cancel-popup").addEventListener("click", (e) => {
 });
 
 // Login/Signup Logic
+// Success Popup function
+function showSuccess() {
+    const popup = document.getElementById('success-popup');
+    popup.style.display = 'block';
+    
+    // 2 seconds kazhichi automatically hide aagidum
+    setTimeout(() => {
+        popup.style.display = 'none';
+    }, 2500);
+}
+
+// Update unga Login Button Listener
 loginBtn.addEventListener('click', async () => {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-    if(!email || !password) return alert("Email/Password fill pannunga thala!");
-
+    
     try {
         await signInWithEmailAndPassword(auth, email, password);
+        showSuccess(); // Success popup inga call panrom!
     } catch (error) {
         if (error.code === 'auth/user-not-found' || error.code === 'auth/invalid-credential') {
             try {
                 await createUserWithEmailAndPassword(auth, email, password);
-                alert("Account Created & Logged In!");
+                showSuccess(); // Account create aanaalum success popup!
             } catch (err) { alert(err.message); }
         } else { alert(error.message); }
     }
