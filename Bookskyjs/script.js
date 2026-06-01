@@ -19,14 +19,15 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 
 // 4. UI Elements
-var popupoverlay = document.querySelector(".popup-overlay")
-var popupbox = document.querySelector(".popup-box")
-var addpopupbutton = document.getElementById("add-popup-button")
-var container = document.getElementById("container")
-var addbook = document.getElementById("add-book")
-var booktitleinput = document.getElementById("book-title-input")
-var bookauthorinput = document.getElementById("book-author-input")
-var bookdescriptioninput = document.getElementById("book-description-input")
+var popupoverlay = document.querySelector(".popup-overlay");
+var popupbox = document.querySelector(".popup-box");
+var addpopupbutton = document.getElementById("add-popup-button");
+var cancelpopup = document.getElementById("cancel-popup"); // 👈 FIX: Added missing selector
+var container = document.getElementById("container");
+var addbook = document.getElementById("add-book");
+var booktitleinput = document.getElementById("book-title-input");
+var bookauthorinput = document.getElementById("book-author-input");
+var bookdescriptioninput = document.getElementById("book-description-input");
 var loginOverlay = document.getElementById('login-overlay');
 var loginBtn = document.getElementById('login-btn');
 
@@ -37,7 +38,6 @@ addpopupbutton.addEventListener("click", function() {
     popupoverlay.style.display = "block";
     popupbox.style.display = "block";
     
-    // Animation trigger panna 10ms gap kudukkurom
     setTimeout(() => {
         popupbox.classList.add("show");
     }, 10);
@@ -48,53 +48,49 @@ cancelpopup.addEventListener("click", function(event) {
     event.preventDefault();
     popupbox.classList.remove("show");
     
-    // Animation mudinja piragu display hidden panrom
     setTimeout(() => {
         popupbox.style.display = "none";
         popupoverlay.style.display = "none";
     }, 300); 
 });
 
-// Login/Signup Logic
 // Success Popup function
 function showSuccess() {
-  const popup = document.getElementById('success-popup');
-  const bar = document.getElementById('progress-bar');
+    const popup = document.getElementById('success-popup');
+    const bar = document.getElementById('progress-bar');
 
-  popup.classList.remove('hide');
-  popup.classList.add('show');
+    popup.classList.remove('hide');
+    popup.classList.add('show');
 
-  // Progress bar drains over 2 seconds
-  bar.style.transition = 'none';
-  bar.style.transform = 'scaleX(1)';
-  setTimeout(() => {
-    bar.style.transition = 'transform 2s linear';
-    bar.style.transform = 'scaleX(0)';
-  }, 50);
-
-  // Fade out after 2.2s
-  setTimeout(() => {
-    popup.classList.remove('show');
-    popup.classList.add('hide');
+    bar.style.transition = 'none';
+    bar.style.transform = 'scaleX(1)';
     setTimeout(() => {
-      popup.classList.remove('hide');
-    }, 300);
-  }, 2200);
+        bar.style.transition = 'transform 2s linear';
+        bar.style.transform = 'scaleX(0)';
+    }, 50);
+
+    setTimeout(() => {
+        popup.classList.remove('show');
+        popup.classList.add('hide');
+        setTimeout(() => {
+            popup.classList.remove('hide');
+        }, 300);
+    }, 2200);
 }
 
-// Update unga Login Button Listener
+// Login Button Listener
 loginBtn.addEventListener('click', async () => {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     
     try {
         await signInWithEmailAndPassword(auth, email, password);
-        showSuccess(); // Success popup inga call panrom!
+        showSuccess();
     } catch (error) {
         if (error.code === 'auth/user-not-found' || error.code === 'auth/invalid-credential') {
             try {
                 await createUserWithEmailAndPassword(auth, email, password);
-                showSuccess(); // Account create aanaalum success popup!
+                showSuccess();
             } catch (err) { alert(err.message); }
         } else { alert(error.message); }
     }
@@ -114,60 +110,30 @@ addbook.addEventListener("click", async (event) => {
             createdAt: serverTimestamp()
         });
 
-        popupoverlay.style.display = "none";
-        popupbox.style.display = "none";
+        popupbox.classList.remove("show");
+        setTimeout(() => {
+            popupoverlay.style.display = "none";
+            popupbox.style.display = "none";
+        }, 300);
+
         booktitleinput.value = ""; bookauthorinput.value = ""; bookdescriptioninput.value = "";
     } catch (e) { console.error(e); }
 });
 
-// Auth & Real-time Fetch Logic
-onAuthStateChanged(auth, (user) => {
-    if (user) {
-        loginOverlay.style.display = 'none';
-        const q = query(collection(db, "books"), orderBy("createdAt", "desc"));
-        
-        onSnapshot(q, (snapshot) => {
-            container.innerHTML = ""; 
-            snapshot.docs.forEach((docSnap) => {
-                const book = docSnap.data();
-                if(book.uid === user.uid) {
-                    var div = document.createElement("div");
-                    div.setAttribute("class", "book-container");
-                    div.innerHTML = `
-                        <h2>${book.title}</h2>
-                        <h5>${book.author}</h5>
-                        <p>${book.description}</p>
-                        <button class="delete-btn" data-id="${docSnap.id}">Delete</button>
-                    `;
-                    container.append(div);
-                }
-            });
-            
-            // Delete listener for each button
-            document.querySelectorAll(".delete-btn").forEach(btn => {
-                btn.onclick = async (e) => {
-                    const id = e.target.getAttribute("data-id");
-                    await deleteDoc(doc(db, "books", id));
-                };
-            });
-        });
-    } else {
-        loginOverlay.style.display = 'flex';
-    }
-});
+// Consolidated Single Auth & Real-time Fetch Logic 👈 FIX: Merged duplicates
+let unsubscribe = null;
 
-// Auth & Real-time Fetch Logic
 onAuthStateChanged(auth, (user) => {
-    
-    // 👇 INDHA LINE DHAAN PUDHUSA ADD PANNIRUKOM 👇
-    // Firebase check panni mudichadhum Loader-ah hide panrom
+    // Hide loader immediately once Firebase responds
     document.getElementById('page-loader').style.display = 'none';
 
     if (user) {
         loginOverlay.style.display = 'none';
+        
         const q = query(collection(db, "books"), orderBy("createdAt", "desc"));
         
-        onSnapshot(q, (snapshot) => {
+        // Listen to changes reactively
+        unsubscribe = onSnapshot(q, (snapshot) => {
             container.innerHTML = ""; 
             snapshot.docs.forEach((docSnap) => {
                 const book = docSnap.data();
@@ -184,7 +150,7 @@ onAuthStateChanged(auth, (user) => {
                 }
             });
             
-            // Delete listener for each button
+            // Re-bind click event dynamically
             document.querySelectorAll(".delete-btn").forEach(btn => {
                 btn.onclick = async (e) => {
                     const id = e.target.getAttribute("data-id");
@@ -194,5 +160,8 @@ onAuthStateChanged(auth, (user) => {
         });
     } else {
         loginOverlay.style.display = 'flex';
+        if (unsubscribe) {
+            unsubscribe(); // Clean up subscription on logout
+        }
     }
 });
