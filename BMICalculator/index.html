@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI CALCULATOR</title>
+    <link rel="icon" href="calculator.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BMI CALCULATOR</h1>
+        <P>Click the Button below to Check your BMI:</P>
+        <input type="number" id="weight" placeholder="Enter Your Weight" oninput="if(this.value > 120) this.value = 120;">
+        <input type="number" id="height" placeholder="Enter Your Height" oninput="if(this.value > 200) this.value = 200;">
+        <button onclick="calculateBMI()" id="weightbutton">Calculate BMI</button>
+        <div id="result"></div>
+        <p id="BMIlevel"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
