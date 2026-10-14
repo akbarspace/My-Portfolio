@@ -1,0 +1,332 @@
+{
+  "_about_this_file": "Single source of truth for the site. Every fact here was read from tngptcmadurai.com on 13 Oct 2026. Edit this file, then run: node build.js",
+  "verifiedOn": "13 October 2026",
+  "college": {
+    "name": "Tamil Nadu Government Polytechnic College (Autonomous), Madurai-11",
+    "short": "TNGPTC Madurai",
+    "established": "1890",
+    "addressLines": ["T.P.K Road", "Madurai - 625011"],
+    "phone": "0452 2673631",
+    "phoneHref": "tel:04522673631",
+    "email": "tnptc116@gmail.com",
+    "officialSite": "https://tngptcmadurai.com/",
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.3009400377164!2d78.10758981398614!3d9.90887459291365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c57e090553ed%3A0xe3613e7505015ddd!2sTamil%20Nadu%20Government%20Polytechnic%20College!5e0!3m2!1sen!2sin!4v1608707998949!5m2!1sen!2sin",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Tamil+Nadu+Government+Polytechnic+College+Madurai",
+    "heroPhoto": "https://tngptcmadurai.com/img/carousel-1.jpg"
+  },
+  "officialLinks": {
+    "courses": "https://tngptcmadurai.com/courses.php",
+    "fees": "https://tngptcmadurai.com/fee.php",
+    "news": "https://tngptcmadurai.com/news.php",
+    "contact": "https://tngptcmadurai.com/contact.php",
+    "exams": "https://tngptcmadurai.com/exams.php",
+    "results": "https://tngptcmadurai.com/result.php",
+    "library": "https://tngptcmadurai.com/library.php",
+    "hostel": "https://tngptcmadurai.com/hostel.php",
+    "nss": "https://tngptcmadurai.com/gallery.php?galcat=nss",
+    "ncc": "https://tngptcmadurai.com/gallery.php?galcat=ncc",
+    "alumni": "https://tngptcmadurai.com/alumni.php",
+    "mandatory": "https://tngptcmadurai.com/mandate.php",
+    "eoa": "https://tngptcmadurai.com/eoa.php",
+    "aicte": "https://www.aicte-india.org/feedback/",
+    "grievance": "https://www.gms.tngptcmadurai.com/",
+    "ndt": "https://tngptcmadurai.com/ndt.php",
+    "examFeePayment": "https://onlinesbi.sbi.bank.in/sbicollect/icollecthome.htm?corpID=877493"
+  },
+  "studyModes": ["Shift I", "Shift II", "Tamil Medium", "Sandwich", "Part-Time"],
+  "catalogue": [
+    { "course": "Civil Engineering", "mode": "Shift I" },
+    { "course": "Civil Engineering Tamil Medium", "mode": "Shift II" },
+    { "course": "Mechanical Engineering", "mode": "Shift I" },
+    { "course": "Mechanical Engineering Tamil Medium", "mode": "Shift II" },
+    { "course": "Electrical and Electronics Engineering", "mode": "Shift I / Shift II" },
+    { "course": "Computer Engineering", "mode": "Shift I" },
+    { "course": "Mechanical Engineering (Sandwich)", "mode": "Sandwich (shift not stated)" },
+    { "course": "Plastic Technology (Sandwich)", "mode": "Sandwich (shift not stated)" },
+    { "course": "Polymer Technology (Sandwich)", "mode": "Sandwich (shift not stated)" },
+    { "course": "Web Designing", "mode": "Shift II" },
+    { "course": "Logistic Technology", "mode": "Shift I" },
+    { "course": "Civil Engineering", "mode": "Part-Time" },
+    { "course": "Mechanical Engineering", "mode": "Part-Time" },
+    { "course": "Electrical and Electronics Engineering", "mode": "Part-Time" }
+  ],
+  "notices": [
+    {
+      "title": "OCTOBER 2026 AUTONOMOUS THEORY EXAM TIME TABLE",
+      "titleTa": "அக்டோபர் 2026 தன்னாட்சி தேர்வு கால அட்டவணை",
+      "period": "October 2026",
+      "isNew": true
+    },
+    {
+      "title": "Alternate Theory and Equivalent Practical Subjects of N Scheme syllabus mapped to C23 syllabus",
+      "titleTa": "",
+      "period": "October 2026",
+      "isNew": true
+    }
+  ],
+  "centresOfExcellence": [
+    { "name": "Future City", "dept": "Civil Engineering", "slug": "civil" },
+    { "name": "Future Factory", "dept": "Mechanical Engineering", "slug": "mechanical" },
+    { "name": "Future Mobility", "dept": "Electrical and Electronics Engineering", "slug": "eee" },
+    { "name": "Future Campus", "dept": "Computer Engineering and Web Designing", "slug": "computer", "slug2": "web-designing" }
+  ],
+  "services": [
+    {
+      "name": "Non-Destructive Testing (NDT) Training Center",
+      "text": "Education and training on methods used to evaluate the properties of materials, components or structures without causing damage.",
+      "href": "https://tngptcmadurai.com/ndt.php"
+    },
+    {
+      "name": "Canada India Institutional Cooperation Project (CIICP)",
+      "text": "Vocational courses in Fire & Safety, AC Servicing and Beautician training.",
+      "href": ""
+    },
+    {
+      "name": "Material testing in Civil Engineering",
+      "text": "Tests on cement, sand, aggregate, water, concrete, brick, paver block, Tor steel and mild steel, to check compliance with relevant Indian standards.",
+      "href": ""
+    }
+  ],
+  "firstYearFees": {
+    "caption": "First-year fee details (I & II semester), as published on the official fee page. The page does not state an academic year.",
+    "rows": [
+      ["Admission Fees", "2"],
+      ["Special Fees", "1000"],
+      ["Development Fees", "1000"],
+      ["Flag Day", "5"],
+      ["YRC", "20"],
+      ["NSS", "10"],
+      ["Caution Deposit", "50"],
+      ["Student Group Insurance", "60"]
+    ],
+    "genuineness": "Marksheet genuineness (on or before 2019): State Board Rs 50 per marksheet; Open Institute of National School Rs 50; CBSE Rs 580."
+  },
+  "timeline": [
+    ["1890", "Established by the District Board of Madurai; later merged with the Municipal Industrial School."],
+    ["1910", "Administration taken over by the Madras Presidency."],
+    ["1919", "Became the Government Industrial Training Institute, offering technical certificate courses."],
+    ["1946", "Dravida Polytechnic established alongside the Industrial Training Institute under the Post-War Development Scheme; later renamed Tamil Nadu Polytechnic College, then Tamil Nadu Government Polytechnic College."],
+    ["1957", "Came under the Director of Technical Education, Chennai, after the Department for Technical Education was created."]
+  ],
+  "gallery": [],
+  "departments": [
+    {
+      "slug": "basic-engineering",
+      "officialId": 1000,
+      "name": "Basic Engineering",
+      "art": "basic",
+      "artCaption": "Illustration: technical drawing instruments, science and workshop learning",
+      "modes": [],
+      "modeNote": "Not listed as a separate course in the official course catalogue. The department carries the first-year syllabus (N-20).",
+      "syllabus": [
+        { "label": "First Year Syllabus", "scheme": "N-20", "url": "https://tngptcmadurai.com/syllabus/iyear/I_YEAR.pdf" }
+      ],
+      "faculty": [
+        ["Mr. R GNANAPRAKASAM", "HoD (i/c)"], ["Mr. R ARUMUGAM", "Lecturer"], ["Mrs. T ANUPRIYA", "Lecturer"],
+        ["Dr. B SIVAPRAKASH", "Lecturer"], ["Ms. PAVITHRA A", "Lecturer"], ["Miss JENEFA JEYARAJ", "Lecturer"],
+        ["Miss SARANYA S", "Lecturer"], ["Mrs. MAHESWARI J", "Lecturer"], ["Mr. SURESH R", "Lecturer"],
+        ["Mr. FRANCIS M", "Lecturer"], ["Mr. RAM BABU G", "Lecturer"], ["Mrs. RUBA HELEN FLORENCE", "Lecturer"],
+        ["Mrs. ALAMELUMANGAI T", "Lecturer"], ["Mr. KARTHIKEYAN V", "Lecturer (AdHoc)"], ["Mr. SELVAKUMAR M", "Lecturer"]
+      ],
+      "highlight": null,
+      "projects": []
+    },
+    {
+      "slug": "civil",
+      "officialId": 1010,
+      "name": "Civil Engineering",
+      "art": "civil",
+      "artCaption": "Illustration: architectural model and surveying instrument",
+      "modes": ["Shift I", "Tamil Medium", "Shift II", "Part-Time"],
+      "modeDetail": [
+        "Civil Engineering: Shift I",
+        "Civil Engineering Tamil Medium: Shift II",
+        "Civil Engineering: Part-Time"
+      ],
+      "syllabus": [
+        { "label": "Regulation", "scheme": "N-20", "url": "https://tngptcmadurai.com/syllabus/civil/REG.pdf" },
+        { "label": "III Semester", "scheme": "N-20", "url": "https://tngptcmadurai.com/syllabus/civil/CIVIL_III.pdf" },
+        { "label": "IV Semester", "scheme": "N-20", "url": "https://tngptcmadurai.com/syllabus/civil/CIVIL_IV.pdf" },
+        { "label": "V Semester", "scheme": "N-20", "url": "https://tngptcmadurai.com/syllabus/civil/CIVIL_V.pdf" },
+        { "label": "VI Semester", "scheme": "N-20", "url": "https://tngptcmadurai.com/syllabus/civil/CIVIL_VI.pdf" },
+        { "label": "Regulation and Syllabus (all semesters)", "scheme": "C23", "url": "https://tngptcmadurai.com/syllabus/civil/Civil_R23.pdf" }
+      ],
+      "faculty": [
+        ["Mr. SARAVANAKUMAR R", "HoD (i/c)"], ["Mr. ARUNKUMAR S", "Lecturer"], ["Mr. SIVASANKAR R", "Lecturer"],
+        ["Ms. K. M. BHUVANESWARI", "Lecturer (Contract)"], ["Ms. E. GRACY SWEETY", "Lecturer (AdHoc)"],
+        ["Mr. V. SURIYAPRAKASH", "Lecturer (AdHoc)"], ["Mr. M. RAMAKRISHNAN", "Lecturer (AdHoc)"],
+        ["Ms. RAGHAVI S", "Lecturer (AdHoc)"], ["Mr. MURUGAN R", "Lecturer (AdHoc)"], ["Mrs. NAGALAKSHMI M", "Lecturer (AdHoc)"],
+        ["Mr. MICHAEL VISUVASAM A S", "Junior Drafting Officer"], ["Mr. RAMA KRISHNAN P", "Skilled Assistant"],
+        ["Mr. MANIKANDAN R", "Skilled Assistant"], ["Mr. VENKATESH B", "Skilled Assistant"]
+      ],
+      "highlight": [
+        "Centre of Excellence: Future City (as listed on the official homepage).",
+        "Material testing in Civil Engineering is listed as a college service: tests on cement, sand, aggregate, water, concrete, brick, paver block, Tor steel and mild steel."
+      ],
+      "projects": []
+    },
+    {
+      "slug": "mechanical",
+      "officialId": 1020,
+      "name": "Mechanical Engineering",
+      "art": "mechanical",
+      "artCaption": "Illustration: CNC machine and gears",
+      "modes": ["Shift I", "Tamil Medium", "Shift II", "Sandwich", "Part-Time"],
+      "modeDetail": [
+        "Mechanical Engineering: Shift I",
+        "Mechanical Engineering Tamil Medium: Shift II",
+        "Mechanical Engineering (Sandwich)",
+        "Mechanical Engineering: Part-Time"
+      ],
+      "syllabus": [
+        { "label": "Regulation", "scheme": "N-20", "url": "https://tngptcmadurai.com/syllabus/mech/REG.pdf" },
+        { "label": "III Semester", "scheme": "N-20", "url": "https://tngptcmadurai.com/syllabus/mech/MECH_III.pdf" },
+        { "label": "IV Semester", "scheme": "N-20", "url": "https://tngptcmadurai.com/syllabus/mech/MECH_IV.pdf" },
+        { "label": "V Semester", "scheme": "N-20", "url": "https://tngptcmadurai.com/syllabus/mech/MECH_V.pdf" },
+        { "label": "VI Semester", "scheme": "N-20", "url": "https://tngptcmadurai.com/syllabus/mech/MECH_VI.pdf" },
+        { "label": "Regulation and Syllabus (all semesters)", "scheme": "C23", "url": "https://tngptcmadurai.com/syllabus/mech/Mech_R23.pdf" }
+      ],
+      "syllabusNote": "The official page lists these syllabi under \"Mechanical Engineering, Mechanical Sandwich\".",
+      "faculty": [
+        ["Mr. T BALASUBRAMANIAM", "HoD"], ["Mr. P MATHIVASANTHAN", "HoD"], ["Mr. S SRIKANTH", "Lecturer"],
+        ["Mr. CHANTRABOSE R", "Lecturer"], ["Mr. BASKARAPANDIAN", "Lecturer"], ["Mr. LAWRENCE XAVIER", "Lecturer"],
+        ["Mrs. GAJALAKSHMI", "Lecturer"], ["Mr. KARTHIKEYAN R", "Lecturer"], ["Mr. SENTHILKUMAR M", "Lecturer"],
+        ["Mr. KUMAR R", "Lecturer"], ["Mr. RAGHU B", "Lecturer"], ["Ms. PREETHI P", "Lecturer"],
+        ["Mr. J ABUTHAHIR", "Lecturer (Contract)"], ["Mr. S PALANIKUMAR", "Lecturer (AdHoc)"],
+        ["Mr. M BALAMURUGAN", "Lecturer (AdHoc)"], ["Mr. D KANNATHASAN", "Lecturer (Contract)"],
+        ["Mr. S VINOTH KUMAR", "Lecturer (AdHoc)"], ["Mr. K MAHESH KANNA", "Lecturer (AdHoc)"],
+        ["Mr. JEYAKUMAR P", "Workshop Instructor"], ["Mr. SOMA SUNDARAM S", "Workshop Instructor"],
+        ["Mr. JOHNPETER J", "Workshop Instructor"], ["Mr. PALANI KUMAR K", "Workshop Instructor"],
+        ["Mr. SELVASUBRAMANIAN V", "Workshop Instructor"], ["Mr. SENTHIL KUMAR P", "Workshop Instructor"],
+        ["Mr. ANANDHA KUMAR S", "Workshop Instructor"], ["Mr. UMA SANKAR V", "Workshop Instructor"]
+      ],
+      "highlight": ["Centre of Excellence: Future Factory (as listed on the official homepage)."],
+      "projects": []
+    },
+    {
+      "slug": "eee",
+      "officialId": 1030,
+      "name": "Electrical and Electronics Engineering",
+      "short": "Electrical & Electronics",
+      "art": "eee",
+      "artCaption": "Illustration: motors, circuits and control panels",
+      "modes": ["Shift I", "Shift II", "Part-Time"],
+      "modeDetail": [
+        "Electrical and Electronics Engineering: Shift I / Shift II",
+        "Electrical and Electronics Engineering: Part-Time"
+      ],
+      "syllabus": [
+        { "label": "Regulation", "scheme": "N-20", "url": "https://tngptcmadurai.com/syllabus/eee/REG.pdf" },
+        { "label": "III Semester", "scheme": "N-20", "url": "https://tngptcmadurai.com/syllabus/eee/EEE_III.pdf" },
+        { "label": "IV Semester", "scheme": "N-20", "url": "https://tngptcmadurai.com/syllabus/eee/EEE_IV.pdf" },
+        { "label": "V Semester", "scheme": "N-20", "url": "https://tngptcmadurai.com/syllabus/eee/EEE_V.pdf" },
+        { "label": "VI Semester", "scheme": "N-20", "url": "https://tngptcmadurai.com/syllabus/eee/EEE_VI.pdf" },
+        { "label": "Regulation and Syllabus (all semesters)", "scheme": "C23", "url": "https://tngptcmadurai.com/syllabus/eee/EEE_R23.pdf" }
+      ],
+      "faculty": [
+        ["Mr. S SARAVANAN", "HoD"], ["Dr. G SARAVANAN", "Lecturer"], ["Mr. B MUGUNTHAN", "Lecturer"],
+        ["Mrs. J JESLIN DRUSILA NESAMALAR", "Lecturer"], ["Mr. S KARTHIKEYAN", "Lecturer"],
+        ["Mr. A SAKKAVUR REHMAN", "Lecturer"], ["Mr. R BALAMURUGAN", "Lecturer"], ["Mr. M RAJAPANDI", "Lecturer"],
+        ["Ms. G VEERA LAKSHMI", "Lecturer"], ["Mr. C GURUNATHAN", "Lecturer"], ["Mr. V THENMATHI", "Lecturer"]
+      ],
+      "highlight": ["Centre of Excellence: Future Mobility (as listed on the official homepage)."],
+      "projects": []
+    },
+    {
+      "slug": "computer",
+      "officialId": 1050,
+      "name": "Computer Engineering",
+      "art": "computer",
+      "artCaption": "Illustration: coding workstations and software development",
+      "modes": ["Shift I"],
+      "modeDetail": ["Computer Engineering: Shift I"],
+      "syllabus": [
+        { "label": "Regulation", "scheme": "N-20", "url": "https://tngptcmadurai.com/syllabus/comp/REG.pdf" },
+        { "label": "III Semester", "scheme": "N-20", "url": "https://tngptcmadurai.com/syllabus/comp/COMP_III.pdf" },
+        { "label": "IV Semester", "scheme": "N-20", "url": "https://tngptcmadurai.com/syllabus/comp/COMP_IV.pdf" },
+        { "label": "V Semester", "scheme": "N-20", "url": "https://tngptcmadurai.com/syllabus/comp/COMP_V.pdf" },
+        { "label": "VI Semester", "scheme": "N-20", "url": "https://tngptcmadurai.com/syllabus/comp/COMP_VI.pdf" },
+        { "label": "Regulation and Syllabus (all semesters)", "scheme": "C23", "url": "https://tngptcmadurai.com/syllabus/comp/Comp_R23.pdf" }
+      ],
+      "faculty": [
+        ["Dr. D. NATARAJASIVAN", "HoD (i/c)"], ["Mr. RAVIKUMAR V", "Lecturer"], ["Mrs. MADHANA K", "Lecturer"],
+        ["Dr. A H NANDHU KISHORE", "Lecturer"], ["Mrs. STELLA J", "Lecturer"], ["Mrs. ARCHANA K", "Lecturer"]
+      ],
+      "highlight": ["Centre of Excellence: Future Campus, shared with Web Designing (as listed on the official homepage)."],
+      "projects": []
+    },
+    {
+      "slug": "plastic-technology",
+      "officialId": 2072,
+      "name": "Plastic Technology",
+      "art": "plastic",
+      "artCaption": "Illustration: moulding and manufacturing",
+      "modes": ["Sandwich"],
+      "modeDetail": ["Plastic Technology (Sandwich)"],
+      "syllabus": [
+        { "label": "Syllabus", "scheme": "N-20", "url": "https://tngptcmadurai.com/syllabus/plastic/Plastic.pdf" },
+        { "label": "Regulation and Syllabus (all semesters)", "scheme": "C23", "url": "https://tngptcmadurai.com/syllabus/plastic/Plastic_R23.pdf" }
+      ],
+      "faculty": [
+        ["Mrs. M KENET MARY", "HoD"], ["Mr. K VIMALASHANMUGAM", "Lecturer"], ["Mr. B SUNDAR", "Lecturer"],
+        ["Miss M MEENA", "Lecturer"], ["Mr. PRABHU R", "Lecturer (AdHoc)"],
+        ["Mr. RAMESH D", "Lab Assistant"], ["Mr. LAKSHMI NARAYANAN P", "Lab Assistant"]
+      ],
+      "highlight": null,
+      "projects": []
+    },
+    {
+      "slug": "polymer-technology",
+      "officialId": 2074,
+      "name": "Polymer Technology",
+      "art": "polymer",
+      "artCaption": "Illustration: polymer materials and testing",
+      "modes": ["Sandwich"],
+      "modeDetail": ["Polymer Technology (Sandwich)"],
+      "syllabus": [
+        { "label": "Syllabus", "scheme": "N-20", "url": "https://tngptcmadurai.com/syllabus/poly/Poly.pdf" },
+        { "label": "Regulation and Syllabus (all semesters)", "scheme": "C23", "url": "https://tngptcmadurai.com/syllabus/poly/Polymer_R23.pdf" }
+      ],
+      "faculty": [
+        ["Mrs. E HEMAMEENAKSHI", "HoD"], ["Mr. DHANASEKAR R", "Lecturer"], ["Mr. G KALIRAJ", "Lecturer"], ["Dr. E BABU", "Lecturer"]
+      ],
+      "highlight": null,
+      "projects": []
+    },
+    {
+      "slug": "web-designing",
+      "officialId": 1057,
+      "name": "Web Designing",
+      "art": "web",
+      "artCaption": "Illustration: HTML, CSS, JavaScript and responsive website mockups",
+      "modes": ["Shift II"],
+      "modeDetail": ["Web Designing: Shift II"],
+      "syllabus": [
+        { "label": "Regulation and Syllabus (all semesters)", "scheme": "C23", "url": "https://tngptcmadurai.com/syllabus/web/Web_R23.pdf" }
+      ],
+      "faculty": [
+        ["Dr. D. NATARAJASIVAN", "HoD (i/c)"], ["Mrs. M. JEYALAKSHMI", "Lecturer"], ["Mrs. S. MALLIKA", "Lecturer"],
+        ["Mrs. PUNITHAVALLI M", "Lecturer"], ["Ms. MUTHU BHUVANESWARI M", "Lecturer (AdHoc)"], ["Mrs. PRABHADEVI P", "Lecturer (AdHoc)"]
+      ],
+      "highlight": ["Centre of Excellence: Future Campus, shared with Computer Engineering (as listed on the official homepage)."],
+      "projects": []
+    },
+    {
+      "slug": "logistic-technology",
+      "officialId": 1060,
+      "name": "Logistic Technology",
+      "art": "logistic",
+      "artCaption": "Illustration: warehouse and supply-chain visuals",
+      "modes": ["Shift I"],
+      "modeDetail": ["Logistic Technology: Shift I"],
+      "syllabus": [
+        { "label": "Regulation and Syllabus (all semesters)", "scheme": "C23", "url": "https://tngptcmadurai.com/syllabus/logi/Logistics_R23.pdf" }
+      ],
+      "faculty": [
+        ["Mr. KALIRAJ G", "HoD (i/c)"], ["Mr. MADHANRAJ", "Lecturer (AdHoc)"], ["Mr. SATHIYAN", "Lecturer (AdHoc)"], ["Mr. MASANAM", "Lecturer (AdHoc)"]
+      ],
+      "highlight": null,
+      "projects": []
+    }
+  ]
+}
